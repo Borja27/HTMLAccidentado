@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action=".">
+            <h1>DECLARACION AMISTOSA DE ACCIDENTE</h1>
+
+            <header>
+
+                <h2>1 Fecha del accidente | Hora</h2> 
+                <input type="datetime" name="fechahora" required/>
+
+                <h2>2 Localizacion | Lugar</h2> 
+                Pais: <input type="text" name="localizacion" required/> <input type="text" name="lugar" required/>
+
+                <h2>3 Victima(s) incluso leve(s)</h2> 
+                <input type="radio" name="victima" value="Si">Si
+                <input type="radio" name="victima" value="No" checked>No
+
+                <h2>4 Daños materiales</h2>
+                Vehiculos distintos de A y B
+                <input type="radio" name="dañovehiculo" value="Si">Si
+                <input type="radio" name="dañovehiculo" value="No" checked>No
+                | Objetos distintos al vehiculo
+                <input type="radio" name="dañoobjetos" value="Si">Si
+                <input type="radio" name="dañoobjetos" value="No" checked>No
+
+                <h2>5 Testigos: nombre, direccion, tel.</h2>
+                <textarea name="testigo" cols="25" rows="3"></textarea>
+
+            </header>
+            <br/>
+            <main>
+                <details>
+                    <summary>
+                        Vehiculo A
+                    </summary>
+                    
+                    <h2>6 Asegurado(vease poliza de seguro)</h2>
+                    NOMBRE: <input type="text" name="nombreA" required/><br/>
+                    Apellidos: <input type="text" name="apellidoA" required/><br/>
+                    Direccion: <input type="text" name="direccionA" required/><br/>
+                    Codigo Postal: <input type="text" name="CPA" pattern="[0-9]{5}" required/> Pais: <input type="text" name="paisA" required/><br/>
+                    Tel. o E-mail: <input type="text" name="contactoA" pattern="email or [0-9]{9}"/>
+
+                    <h2>7 Vehiculo</h2>
+                    <p>Vehiculo a motor</p>
+                    Marca 
+                    <select name="marcaA">
+                        <option value="audi">Audi</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="opel">Opel</option>
+                        <option value="seat">Seat</option>
+                    </select>
+                    Modelo <input type="text" name="modeloA" required/><br/>
+                    Matricula (o bastidor) <input type="number" name="matriculaA" required/><br/>
+                    Pais de matricula <input type="text" name="paismatriculaA" required/><br/>
+                    <p>Remolque</p>
+                    Matricula (o bastidor) <input type="number" name="matricularemolqueA" required/><br/>
+                    Pais de matricula <input type="text" name="paismatricularemolqueA" required/><br/>
+                    <h2>8 Aseguradora(vease poliza de seguro)</h2>
+                    Nombre: <input type="text" name="aseguradoraA" required/><br/>
+                    Nº de poliza: <input type="number" name="polizaA" required/><br/>
+                    Nº de Carta Verde: <input type="number" name="cartaverdeA" required/><br/>
+                    Certificado:
+                    o Carta Verde valida desde <input type="date" name="certiniA" required/> hasta <input type="date" name="certfinA" required/><br/>
+                    Agencia (oficina o corredor):<input type="text" name="agenciaA" required/><br/>
+                    Nombre: <input type="text" name="nomagenciaA" required/><br/>
+                    Direccion: <input type="text" name="diragenciaA" required/><br/>
+                    Pais: <input type="text" name="paisagenciaA" required/><br/>
+                    Tel. o E-mail: <input type="text" name="contactoagenciaA" pattern="email or [0-9]{9}"/><br/>
+                    ¿Los daños propios del vehiculo estan asegurados?
+                    <input type="radio" name="dañoaseguradoA" value="Si" checked/>Si
+                    <input type="radio" name="dañoaseguradoA" value="No"/>No
+                    
+                    <h2>9 Conductor(ver permiso de conducir)</h2>
+                    NOMBRE:<input type="text" name="nombreconductorA"/><br/>
+                    Apellidos:<input type="text" name="apellidosconductorA"/><br/>
+                    Fecha de nacimiento:<input type="date" name="nacimientoA"/><br/>
+                    Direccion: <input type="text" name="dirconductorA"/><br/>
+                    Pais:<input type="text" name="paisconductorA"/><br/>
+                    Tel. o E-mail: <input type="text" name="contactoconductorA" pattern="email or [0-9]{9}"/><br/>
+                    Permiso de conducir nº: <input type="number" name="permisoA"/><br/>
+                    Categoria(A,B,...): <input type="text" name="categoriaA"/><br/>
+                    Permiso valido hasta: <input type="date" name="caducidadA"/><br/>
+                    
+                    <h2>Daños apreciados al vehiculo A:</h2>
+                    <textarea name="dañosapreciadosA" cols="25" rows="3"></textarea>
+                    
+                    <h2>14 Observaciones</h2>
+                    <textarea name="observacionesA" cols="25" rows="3"></textarea>
+                </details>
+
+                <details>
+                    <summary>
+                        Vehiculo B
+                    </summary>
+                    
+                    <h2>6 Asegurado(vease poliza de seguro)</h2>
+                    NOMBRE: <input type="text" name="nombreB" required/><br/>
+                    Apellidos: <input type="text" name="apellidoB" required/><br/>
+                    Direccion: <input type="text" name="direccionB" required/><br/>
+                    Codigo Postal: <input type="text" name="CPB" pattern="[0-9]{5}" required/> Pais: <input type="text" name="paisB" required/><br/>
+                    Tel. o E-mail: <input type="text" name="contactoB" pattern="email or [0-9]{9}"/>
+
+                    <h2>7 Vehiculo</h2>
+                    <p>Vehiculo a motor</p>
+                    Marca 
+                    <select name="marcaB">
+                        <option value="audi">Audi</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="opel">Opel</option>
+                        <option value="seat">Seat</option>
+                    </select>
+                    Modelo <input type="text" name="modeloB" required/><br/>
+                    Matricula (o bastidor) <input type="number" name="matriculaB" required/><br/>
+                    Pais de matricula <input type="text" name="paismatriculaB" required/><br/>
+                    <p>Remolque</p>
+                    Matricula (o bastidor) <input type="number" name="matricularemolqueB" required/><br/>
+                    Pais de matricula <input type="text" name="paismatricularemolqueB" required/><br/>
+                    
+                    <h2>8 Aseguradora(vease poliza de seguro)</h2>
+                    Nombre: <input type="text" name="aseguradoraB" required/><br/>
+                    Nº de poliza: <input type="number" name="polizaB" required/><br/>
+                    Nº de Carta Verde: <input type="number" name="cartaverdeB" required/><br/>
+                    Certificado:
+                    o Carta Verde valida desde <input type="date" name="certiniB" required/> hasta <input type="date" name="certfinB" required/><br/>
+                    Agencia (oficina o corredor):<input type="text" name="agenciaB" required/><br/>
+                    Nombre: <input type="text" name="nomagenciaB" required/><br/>
+                    Direccion: <input type="text" name="diragenciaB" required/><br/>
+                    Pais: <input type="text" name="paisagenciaB" required/><br/>
+                    Tel. o E-mail: <input type="text" name="contactoagenciaB" pattern="email or [0-9]{9}"/><br/>
+                    ¿Los daños propios del vehiculo estan asegurados?
+                    <input type="radio" name="dañoaseguradoB" value="Si" checked/>Si
+                    <input type="radio" name="dañoaseguradoB" value="No"/>No
+                    
+                    <h2>9 Conductor(ver permiso de conducir)</h2>
+                    NOMBRE:<input type="text" name="nombreconductorB"/><br/>
+                    Apellidos:<input type="text" name="apellidosconductorB"/><br/>
+                    Fecha de nacimiento:<input type="date" name="nacimientoB"/><br/>
+                    Direccion: <input type="text" name="dirconductorB"/><br/>
+                    Pais:<input type="text" name="paisconductorB"/><br/>
+                    Tel. o E-mail: <input type="text" name="contactoconductorB" pattern="email or [0-9]{9}"/><br/>
+                    Permiso de conducir nº: <input type="number" name="permisoB"/><br/>
+                    Categoria(A,B,...): <input type="text" name="categoriaB"/><br/>
+                    Permiso valido hasta: <input type="date" name="caducidadB"/><br/>
+                    
+                    <h2>Daños apreciados al vehiculo B:</h2>
+                    <textarea name="dañosapreciadosB" cols="25" rows="3"></textarea>
+                    
+                    <h2>14 Observaciones</h2>
+                    <textarea name="observacionesB" cols="25" rows="3"></textarea>
+                </details>
+                <details>
+                    <summary>
+                        12 Circunstancias
+                    </summary>
+                    
+                    <p>Marcar cada casilla que proceda para precisar el croquis</p>
+                    A<input type="checkbox" name="paradoA" value="Si" />
+                    Estaba estacionando/parado
+                    <input type="checkbox" name="paradoB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="saliaA" value="Si" />
+                    Salia de un estacionamiento/abriendo puerta
+                    <input type="checkbox" name="saliaB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="estacionarA" value="Si" />
+                    Iba a estacionar
+                    <input type="checkbox" name="estacionarB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="saliaaparA" value="Si" />
+                    Salia de un aparcamiento, de un lugar privado, de un camino de tierra
+                    <input type="checkbox" name="saliaaparB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="entraaparA" value="Si" />
+                    Entraba a un aparcamiento, a un lugar privado, a un camino de tierra
+                    <input type="checkbox" name="entraaparB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="entragiroA" value="Si" />
+                    Entraba a una plaza de sentido giratorio
+                    <input type="checkbox" name="entragiroB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="circulabagiroA" value="Si" />
+                    Circulaba por una plaza de sentido giratorio
+                    <input type="checkbox" name="circulabagiroB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="colisiontraseraA" value="Si" />
+                    Colisiono en la parte de atras al otro vehiculo que circulaba en el mismo sentido y en el mismo carril
+                    <input type="checkbox" name="colisiontraseraB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="carrildifA" value="Si" />
+                    Circulaba en el mismo sentido y en carril diferente
+                    <input type="checkbox" name="carrildifB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="cambioA" value="Si" />
+                    Cambiaba de carril
+                    <input type="checkbox" name="cambioB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="adelantabaA" value="Si" />
+                    Adelantaba
+                    <input type="checkbox" name="adelantabaB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="giroderA" value="Si" />
+                    Giraba a la derecha
+                    <input type="checkbox" name="giroderB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="giroizqA" value="Si" />
+                    Giraba a la izquierda
+                    <input type="checkbox" name="giroizqB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="marchaatrasA" value="Si" />
+                    Daba marcha atras
+                    <input type="checkbox" name="marchaatrasB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="invadiaA" value="Si" />
+                    Invadia la parte reservada a la circulacion en sentido inverso
+                    <input type="checkbox" name="invadiaB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="cruceA" value="Si" />
+                    Venia de la derecha (en un cruce)
+                    <input type="checkbox" name="cruceB" value="Si" />B<br/>
+
+                    A<input type="checkbox" name="señalA" value="Si" />
+                    No respeto la señal de preferencia o semaforo en rojo
+                    <input type="checkbox" name="señalB" value="Si" />B<br/>
+
+                    A<input type="number" name="casillasA"  />
+                    Indicar numero de casillas marcadas
+                    <input type="number" name="casillasB" />B<br/>
+                </details>
+                <br/>
+                Firma conductor A: <input type="text" name="firmaA" required/><br/>
+                Firma conductor B: <input type="text" name="firmaB" required/><br/>
+            </main>
+            <br/>
+            <input type="submit" />
+        </form>
+
+    </body>
+</html>
